@@ -1,0 +1,151 @@
+// пример файла 'assets/sass/_fonts.scss'
+$path_to_fonts: '../assets/fonts/';
+
+// ==============================================================================
+// =================================== ШРИФТЫ ===================================
+// 1. При помощи плагина Figma ‘Font Fascia’ определить все шрифты макета
+// 2. Найти и скачать нужные шрифты:
+//     https://fonts.google.com 
+//     можно скачать
+//     или можно вставить ссылку на шрифт - ссылка на вкладке Embed – копируем “https: ... =swap”, затем вставить как стиль:
+//         wp_enqueue_style('Roboto-Slab', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+// 3. Скачанные фонты сконвертировать - https://onlinefontconverter.com в форматы ‘woff’ и ‘woff2’ и поместить в assets/fonts/
+// 4. подключить шрифты в этом файле sass/_fonts.scss, который потом @import 'fonts'
+
+$_font_gilroy-bold:     "Gilroy Bold";
+$_font_gilroy-semibold: "Gilroy SemiBold";
+$_font_gilroy-medium:   "Gilroy Medium";
+$_font_gilroy-regular:  "Gilroy Regular";
+
+@font-face {
+    font-family: "Gilroy SemiBold";
+    src: 
+        local("Gilroy-SemiBold"), local("Gilroy SemiBold"), 
+        url($path_to_fonts + "Gilroy-Semibold.woff2") format("woff2"),
+        url($path_to_fonts + "Gilroy-Semibold.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gilroy Medium";
+    src: 
+        local("Gilroy-Medium"), local("Gilroy Medium"), 
+        url($path_to_fonts + "Gilroy-Medium.woff2") format("woff2"),
+        url($path_to_fonts + "Gilroy-Medium.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Gilroy Regular";
+    src: 
+        local("Gilroy-Regular"), local("Gilroy Regular"), 
+        url($path_to_fonts + "Gilroy-Regular.woff2") format("woff2"),
+        url($path_to_fonts + "Gilroy-Regular.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: 
+        local("Gilroy-Bold"), local("Gilroy Bold"), 
+        url($path_to_fonts + "Gilroy-Bold.woff2") format("woff2"),
+        url($path_to_fonts + "Gilroy-Bold.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+// ==============================================================================
+// =================================== ИКОНКИ ===================================
+
+// свой иконочный шрифт: (для простых одноцветных иконок):
+
+// 1. скачать из проекта (выделить иконку, menu, Object, Outline stroke (shift/cmd/o), экспорт svg) 
+//    или скачать нужные иконки svg в папку (если платные - открыть их в браузере, клик на иконке - Inspect - клик на теге, копи элемент, создать файл в папке иконок, вставить в него скопированный тег svg, сохранить под имененем иконки)
+
+// 2. преобразование файла иконок в шрифт - icomoon.io 
+//    вверху фиолетовая кнопка "IcoMoon App", вверху слева ≡, "New Empty Set", "Add Icons From Library" (можно вставить из предлагаемых)
+//    на имени сета справа ≡, "Import to Set", выбрать иконки из своей папки
+
+//    после вставки всех иконок удалить цвет - ≡, Properties, Remove All Colors
+//    выбрать иконки для шрифта (желтая кнопка со стрелкой вверху служит для выбора)
+
+//    внизу кнопка "Generate Font"
+//    названия иконок будут частью класса, которые будем добавлять к элементам, поэтому нужно их правильно назвать
+
+//    справа от "Download" кликнуть на шестеренку Свойства:
+//        Font Name     - название шрифта, который будем подключать ( icons )
+//        Class Prefix  - префикс класса ( _icon- ), т.е. сначала префикс, потом имя класса, которое равно названию иконки (напр. _icon-arrow)
+
+//    "Download", скачиваем архив
+//    из архива нам нужны - папка "/fonts" и файл "style.css" 
+
+// 3. копируем файлы иконочных шрифтов из "/fonts" в папку "/fonts" проекта (icons.svg, icons.ttf, icons.woff)
+//    из файла "style.css" копируем в конец этого файла _fonts.scss в раздел "иконки" строки иконок:
+//        ._icon-arrow-down:before {
+//            content: "\e900";
+//        }
+
+@font-face {
+    font-family: 'icons';
+    src:
+        url($path_to_fonts + "icons.ttf?ypwd8s") format('truetype'),
+        url($path_to_fonts + "icons.woff?ypwd8s") format('woff'),
+        url($path_to_fonts + "icons.svg?ypwd8s#icons") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+// добавил ::before, чтобы класс иконки не влиял на весь элемент, а только добавлял иконку
+[class^="_icon-"]::before, 
+[class*=" _icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+  // сюда вставляем строки иконок из файла "style.css" скачанного архива ------------
+
+  ._icon-arrow-down:before {
+    content: "\e900";
+  }
+  ._icon-arrow-link:before {
+    content: "\e901";
+  }
+  ._icon-cart:before {
+    content: "\e902";
+  }
+  ._icon-favorite:before {
+    content: "\e903";
+  }
+  ._icon-location:before {
+    content: "\e904";
+  }
+  ._icon-phone:before {
+    content: "\e905";
+  }
+  ._icon-search:before {
+    content: "\e906";
+  }
+  ._icon-send:before {
+    content: "\e907";
+  }
+  ._icon-share:before {
+    content: "\e908";
+  }

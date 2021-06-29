@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Furniture Shop</title>
+
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+
 </head>
 <body>
-    <h1 class="title">Это учебный проект, привет   !</h1>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__container _container">
+                <div class="header__body">
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link"></a>
+                    </div>
+
+                    <div class="header__menu menu">
+                        <button type="button" class="menu__icon icon-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="" class="menu__link">Products</a>
+                                    <button class="menu__arrow _icon-favorite" type="button" data-spoiler></button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header__search">
+                    </div>
+
+                    <div class="header__action actions-header">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+        
+    <script src="js/script.js"></script>
 </body>
 </html>
+
+<div class="menu header__menu">
+    <nav class="menu__body">
+        <ul class="menu__list">
+            <li class="menu__item menu__item--active">
+                <a class="menu__link" href="#">item_1</a>
+            </li>
+
+            <li class="menu__item">
+                <a class="menu__link" href="#">item_2</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="menu__burger">
+        <span></span>
+    </div>
+</div>

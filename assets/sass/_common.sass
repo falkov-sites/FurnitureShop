@@ -1,0 +1,28 @@
+// $_min_width: 320px
+// $_max_width: 1440px
+
+// $_container_width: 1270  // 1240 + 15*2
+
+$md1: 1240 + 12
+$md2: 991.98
+$md3: 767.98
+$md4: 479.98
+    
+$_color_blue: #00f
+$_color_red: #f00
+
+
+._container
+    max-width: 1270px  // 1240 + 15*2
+    margin: 0 auto
+    padding: 0 15px
+
+    @media screen and ( max-width: 1240px )
+        max-width: 970px
+
+    @media screen and ( max-width: 992px )
+        max-width: 750px
+        
+    @media screen and ( max-width: 768px )
+        max-width: none
+        padding: 0 10px

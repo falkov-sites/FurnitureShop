@@ -1,20 +1,126 @@
-@import common
+@import my_normalize
+// @import common
 @import fonts
-@import iconsfont
     
-
-
 .header
-    // .header__title
-    &__title
-        font-family: $_font_gilroy-regular
-        color: $_color_blue
+    // .header__wrapper
+    &__wrapper
+
+    // .header__container
+    &__container
+
+    // .header__body
+    &__body
+
+    // .header__logo
+    &__logo
+
+    // .header__logo-link
+    &__logo-link
+
+    // .header__menu
+    &__menu
+
+    // .header__search
+    &__search
+
+    // .header__actions
+    &__actions
 
 
-    
-    
 .menu
     // .menu__icon
     &__icon
         display: none
 
+    // .menu__body
+    &__body
+
+    // .menu__list
+    &__list
+
+    // .menu__item
+    &__item
+
+    // .menu__link
+    &__link
+
+    // .menu__arrow
+    &__arrow
+
+    // .menu__sub-list
+    &__sub-list
+
+    // .menu__sub-item
+    &__sub-item
+
+    // .menu__sub-link
+    &__sub-link
+
+
+.icon-menu
+
+
+.search-form
+    // .search-form__icon
+    &__icon
+
+    // .search-form__item
+    &__item
+
+    // .search-form__input
+    &__input
+
+
+.actions
+    // .actions__item
+    &__item
+
+
+.action-favorite
+
+
+.action-cart
+    // .action-cart__icon
+    &__icon
+
+    // .action-cart__body
+    &__body
+
+    // .action-cart__list
+    &__list
+
+
+.cart-list
+
+.action-user
+
+.user-avatar
+
+// .my-clip_path
+//     background-color: #2e9b58
+//     height: 200px
+//     width: 300px
+//     margin: 30px
+//     transition: clip-path 1s ease
+
+//     &:hover
+//         background-color: #dcdf25
+//         clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+
+
+.card-wrapper
+    height: 200px
+    width: 300px
+    margin: 30px
+
+    &:hover .card-body
+        background-color: #dcdf25
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+
+.card-body 
+    background-color: #adaf1e
+    height: 100%
+    width: 100%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+    transition: all 0.3s;

@@ -1,16 +1,33 @@
-@import my_normalize
-// @import common
+@import _normalize
+@import _common
 @import fonts
     
+body
+    background: #f9f1e7
+
 .header
+    // position: absolute
+    width: 100%
+    top: 0
+    left: 0
+
     // .header__wrapper
     &__wrapper
+        // position: fixed
+        width: 100%
+        left: 0
+        top: 0
+        z-index: 50
 
     // .header__container
     &__container
 
     // .header__body
     &__body
+        display: flex
+        align-items: center
+        padding: 5px 0
+        min-height: 125px
 
     // .header__logo
     &__logo
@@ -18,17 +35,29 @@
     // .header__logo-link
     &__logo-link
 
+    // .header__logo-img
+    &__logo-img
+        width: 50px
+        margin-right: 10px
+
+
+
     // .header__menu
     &__menu
 
     // .header__search
     &__search
+        @media screen and ( min-width: $md2_992 )
+            flex: 1 1 auto
+            
 
     // .header__actions
     &__actions
 
 
 .menu
+    flex: 0 1 420px
+
     // .menu__icon
     &__icon
         display: none
@@ -38,41 +67,129 @@
 
     // .menu__list
     &__list
+        @media screen and ( min-width: $md3_768 )
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-evenly
 
     // .menu__item
     &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        margin: 0 3px
+        padding: 5px 0
+        position: relative
+
+        @media (any-hover: hover)
+            &:hover
+                .menu__sub-list
+                    transform: translate(0px, 0px)
+                    opacity: 1
+                    visibility: visible
+                    pointer-events: auto
+
+                .menu__arrow
+                    transform: rotate(-180deg)
+
+                .menu__arrow,
+                .menu__link
+                    color: $color_blue
+
+        @media ( min-width: 768px )
+            &._hover
+                .menu__sub-list
+                    transform: translate(0px, 0px)
+                    opacity: 1
+                    visibility: visible
+                    pointer-events: auto
+
+                .menu__arrow
+                    transform: rotate(-180deg)
+
+                .menu__arrow,
+                .menu__link
+                    color: $color_blue
 
     // .menu__link
     &__link
+        font-weight: 500
+        color: inherit
+        transition: color 0.3s ease 0s
 
     // .menu__arrow
     &__arrow
+        margin: 0px 0px 0px 8px
+        transition: all 0.3s ease 0s
+        font-size: 8px
 
     // .menu__sub-list
     &__sub-list
+        position: relative
+        background-color: #2a98f1
+        padding: 15px
+        flex: 1 1 100%
+        @media screen and ( min-width: $md3_768 )
+            opacity: 0
+            transition: all 0.3s ease 0s
+            transform: translate(0px, 10px)
+            visibility: hidden
+            min-width: 200px
+            left: 0
+            pointer-events: none
+            position: absolute
+            top: 100%
+
+            
 
     // .menu__sub-item
     &__sub-item
+        &:not(:last-child)
+            margin: 0px 0px 5px 0px
+            
 
     // .menu__sub-link
     &__sub-link
+        color: #fff
+        line-height: 120%
 
 
 .icon-menu
 
 
 .search-form
+    max-width: 473px
+
     // .search-form__icon
     &__icon
+        display: none
 
     // .search-form__item
     &__item
+        background-color: #fff
+        display: flex
+        align-items: center
+
+    // .search-form__btn
+    &__btn
+        flex: 0 0 45px
+        height: 45px
+        font-size: 15px
+        color: #333333
 
     // .search-form__input
     &__input
-
-
+        font-size: 14px
+        color: darkgray
+        width: 100%
+        padding: 0px 20px 0px 0px
+        outline: none
+        
 .actions
+    display: flex
+    align-items: center
+
     // .actions__item
     &__item
 
@@ -96,6 +213,12 @@
 .action-user
 
 .user-avatar
+    width: 40px
+    border-radius: 50%
+
+
+
+
 
 // .my-clip_path
 //     background-color: #2e9b58
@@ -124,3 +247,53 @@
     width: 100%
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
     transition: all 0.3s;
+
+
+
+
+
+// sass -------------------------------
+.tabs-block
+
+    // .tabs-block__nav
+    &__nav
+        display: flex
+        margin: 0 2px
+
+    // .tabs-block__item
+    &__item
+        display: flex
+        flex: 0 1 33.333%
+        margin: 0 2px
+        background-color: #ee9b9b
+        padding: 20px
+        justify-content: center
+        align-items: center
+        cursor: pointer
+
+        &._active
+            background-color: #539bee
+
+
+    // .tabs-block__body
+    &__body
+
+    // .tabs-block__block
+    &__block
+
+
+
+// ui.sass ----------------------------
+._tabs
+
+	// ._tabs__caption
+	&__caption
+
+	// ._tabs-block
+	&__block
+		display: none
+
+		// ._tabs-block.active
+		&._active
+			display: block
+

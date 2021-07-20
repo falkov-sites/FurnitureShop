@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,12 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
 </head>
+
 <body>
     <header class="header">
         <div class="header__wrapper">
             <div class="header__container _container">
-                <div class="header__body">
+                <div class="header__body">                    
                     <div class="header__logo">
                         <a href="#" class="header__logo-link">
                             <img class="header__logo-img" src="assets/images/logo.jpg" alt="">
@@ -22,12 +24,6 @@
                     </div>
 
                     <div class="header__menu menu">
-                        <button type="button" class="menu__icon icon-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-
                         <nav class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
@@ -35,13 +31,13 @@
 
                                     <button class="menu__arrow _icon-arrow-down" type="button" data-spoiler></button>
                                     <ul class="menu__sub-list">
-                                        <li class="menu__sub-item"> 
+                                        <li class="menu__sub-item">
                                             <a href="" class="menu__sub-link">Products 1</a>
                                         </li>
-                                        <li class="menu__sub-item"> 
+                                        <li class="menu__sub-item">
                                             <a href="" class="menu__sub-link">Products 2</a>
                                         </li>
-                                        <li class="menu__sub-item"> 
+                                        <li class="menu__sub-item">
                                             <a href="" class="menu__sub-link">Products 3</a>
                                         </li>
 
@@ -53,10 +49,10 @@
 
                                     <button class="menu__arrow _icon-arrow-down" type="button" data-spoiler></button>
                                     <ul class="menu__sub-list">
-                                        <li class="menu__sub-item"> 
+                                        <li class="menu__sub-item">
                                             <a href="" class="menu__sub-link">Rooms 1</a>
                                         </li>
-                                        <li class="menu__sub-item"> 
+                                        <li class="menu__sub-item">
                                             <a href="" class="menu__sub-link">Rooms 2</a>
                                         </li>
                                     </ul>
@@ -76,7 +72,8 @@
 
                             <form action="#" class="search-form__item">
                                 <button type="submit" class="search-form__btn _icon-search"></button>
-                                <input type="text" class="search-form__input" autocomplete="off" name="form[]" data-value="Search ..." placeholder="Search ...">
+                                <input type="text" class="search-form__input" autocomplete="off" name="form[]"
+                                    data-value="Search ..." placeholder="Search ...">
                             </form>
                         </div>
                     </div>
@@ -98,46 +95,102 @@
                         </a>
                     </div>
 
+                    <button type="button" class="menu__icon icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
                 </div>
 
             </div>
 
-            </div>
-
-
         </div>
 
+
+        <!-- </div> -->
+
     </header>
-        
+
     <!-- <div class="card-wrapper">
         <div class="card-body">
         </div>
     </div> -->
 
-    <div class="tabs-block _tabs">
-        <nav class="tabs-block__nav">
-            <div class="tabs-block__item _tabs__caption _active">Tab 1</div>
-            <div class="tabs-block__item _tabs__caption">Tab 2</div>
-            <div class="tabs-block__item _tabs__caption">Tab 3</div>
+    <div class="mytabs _tabs">
+        <nav class="mytabs__nav">
+            <div class="mytabs__caption _tabs__caption _active">Tab 1</div>
+            <div class="mytabs__caption _tabs__caption">Tab 2</div>
+            <div class="mytabs__caption _tabs__caption">Tab 3</div>
         </nav>
-    
-        <div class="tabs-block__body">
-            <div class="tabs-block__block _tabs__block _active">
-                [Tab 1]  asdasd Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Voluptatum dolore quis sequi qui, fuga neque modi porro. 
-                Fuga repellat hic perferendis, commodi quos aliquid
+
+        <div class="mytabs__body">
+            <div class="mytabs__block _tabs__block _active">
+                [Tab 1] Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Города свой
+                грустный, безорфографичный текстов свою, всеми вдали мир деревни даль возвращайся пунктуация они
+                проектах
+                использовало, ipsum парадигматическая. Ее, которое. Lorem ipsum dolor, sit amet consectetur
+                Lorem ipsum dolor, sit amet consectetur
             </div>
-    
-            <div class="tabs-block__block _tabs__block">
-                [Tab 2] Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Voluptatum dolore quis sequi qui, fuga neque modi porro. 
-                Fuga repellat hic perferendis, commodi quos aliquid
+
+            <div class="mytabs__block _tabs__block">
+                [Tab 2] Lorem ipsum dolor, sit amet consectetur
+                Lorem ipsum dolor, sit amet consectetur
             </div>
-    
-            <div class="tabs-block__block _tabs__block">
-                [Tab 3] Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Voluptatum dolore quis sequi qui, fuga neque modi porro. 
-                Fuga repellat hic perferendis, commodi quos aliquid
+
+            <div class="mytabs__block _tabs__block">
+                [Tab 3] Lorem ipsum dolor, sit amet consectetur
+                Lorem ipsum dolor, sit amet consectetur
+            </div>
+        </div>
+    </div>
+
+
+    <div class="spoiler-block" data-spoilers data-one-spoiler>
+        <div class="spoiler-block__item">
+            <div class="spoiler-block__title" data-spoiler>
+                <span class="spoiler-block__title-text">Вопрос1</span>
+                <button class="spoiler-block__title-icon _icon-arrow-down"></button>
+            </div>
+
+            <div class="spoiler-block__body">
+                Ответ1: Далеко-далеко за словесными горами в стране гласных, иДалеко-далеко за словесными горами в
+                стране
+                гласных, иДалеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Запятых
+                одна,
+                знаках дал текстами эта там не от всех буквенных свое строчка домах сих грамматики великий рукописи ее,
+                коварный
+                рыбными.
+            </div>
+        </div>
+        <div class="spoiler-block__item">
+            <div class="spoiler-block__title" data-spoiler>Вопрос2</div>
+            <div class="spoiler-block__body">
+                Ответ2: Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Запятых
+                одна,
+                знаках дал текстами эта там не от всех буквенных свое строчка домах сих грамматики великий рукописи ее,
+                коварный
+                рыбными.
+            </div>
+        </div>
+        <div class="spoiler-block__item">
+            <div class="spoiler-block__title" data-spoiler>Вопрос3</div>
+            <div class="spoiler-block__body">
+                Ответ3: Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Запятых
+                одна,
+                знаках дал текстами эта там не от всех буквенных свое строчка домах сих грамматики великий рукописи ее,
+                коварный
+                рыбными.
+            </div>
+        </div>
+        <div class="spoiler-block__item">
+            <div class="spoiler-block__title" data-spoiler>Вопрос4</div>
+            <div class="spoiler-block__body">
+                Ответ4: Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Запятых
+                одна,
+                знаках дал текстами эта там не от всех буквенных свое строчка домах сих грамматики великий рукописи ее,
+                коварный
+                рыбными.
             </div>
         </div>
     </div>
@@ -145,4 +198,5 @@
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

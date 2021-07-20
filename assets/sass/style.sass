@@ -1,19 +1,19 @@
 @import _normalize
 @import _common
 @import fonts
-    
+
 body
     background: #f9f1e7
 
 .header
-    // position: absolute
+    position: absolute
     width: 100%
     top: 0
     left: 0
 
     // .header__wrapper
     &__wrapper
-        // position: fixed
+        position: fixed
         width: 100%
         left: 0
         top: 0
@@ -40,8 +40,6 @@ body
         width: 50px
         margin-right: 10px
 
-
-
     // .header__menu
     &__menu
 
@@ -49,11 +47,9 @@ body
     &__search
         @media screen and ( min-width: $md2_992 )
             flex: 1 1 auto
-            
 
     // .header__actions
     &__actions
-
 
 .menu
     flex: 0 1 420px
@@ -64,6 +60,16 @@ body
 
     // .menu__body
     &__body
+        @media ( min-width: $md3_768 )
+            position: fixed
+            width: 100%
+            height: 20%
+            overflow: auto
+            top: 0
+            left: 0
+            background-color: #fcf8f3
+            transition: left 0.3s ease 0s
+            padding: 70px 15px 30px 15px
 
     // .menu__list
     &__list
@@ -91,7 +97,9 @@ body
                     pointer-events: auto
 
                 .menu__arrow
+                    transform-origin: left left
                     transform: rotate(-180deg)
+                    // transform: scale(1, -1)
 
                 .menu__arrow,
                 .menu__link
@@ -108,9 +116,9 @@ body
                 .menu__arrow
                     transform: rotate(-180deg)
 
-                .menu__arrow,
-                .menu__link
-                    color: $color_blue
+                    .menu__arrow,
+                    .menu__link
+                        color: $color_blue
 
     // .menu__link
     &__link
@@ -128,7 +136,7 @@ body
     &__sub-list
         position: relative
         background-color: #2a98f1
-        padding: 15px
+        padding: 5px
         flex: 1 1 100%
         @media screen and ( min-width: $md3_768 )
             opacity: 0
@@ -141,22 +149,20 @@ body
             position: absolute
             top: 100%
 
-            
-
     // .menu__sub-item
     &__sub-item
         &:not(:last-child)
             margin: 0px 0px 5px 0px
-            
+            @media (any-hover: hover)
+                &:hover
+                    background-color: #b0d6f5
 
     // .menu__sub-link
     &__sub-link
         color: #fff
         line-height: 120%
 
-
 .icon-menu
-
 
 .search-form
     max-width: 473px
@@ -185,7 +191,7 @@ body
         width: 100%
         padding: 0px 20px 0px 0px
         outline: none
-        
+
 .actions
     display: flex
     align-items: center
@@ -193,9 +199,7 @@ body
     // .actions__item
     &__item
 
-
 .action-favorite
-
 
 .action-cart
     // .action-cart__icon
@@ -207,7 +211,6 @@ body
     // .action-cart__list
     &__list
 
-
 .cart-list
 
 .action-user
@@ -215,10 +218,6 @@ body
 .user-avatar
     width: 40px
     border-radius: 50%
-
-
-
-
 
 // .my-clip_path
 //     background-color: #2e9b58
@@ -231,7 +230,6 @@ body
 //         background-color: #dcdf25
 //         clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
 
-
 .card-wrapper
     height: 200px
     width: 300px
@@ -239,61 +237,105 @@ body
 
     &:hover .card-body
         background-color: #dcdf25
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%)
 
-.card-body 
+.card-body
     background-color: #adaf1e
     height: 100%
     width: 100%
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
-    transition: all 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%)
+    transition: all 0.3s
 
+// ================================================================== tabs
+._tabs
 
+    // ._tabs__caption
+    &__caption
 
+    // ._tabs__block
+    &__block
+        display: none
 
+    // ._tabs__block.active
+    &._active
+        display: block
 
-// sass -------------------------------
-.tabs-block
+// ============================================== tabs
+.mytabs
+    margin: 0px 10px 30px 10px
 
-    // .tabs-block__nav
+    // .mytabs__nav
     &__nav
         display: flex
         margin: 0 2px
 
-    // .tabs-block__item
-    &__item
+    // .mytabs__caption
+    &__caption
         display: flex
         flex: 0 1 33.333%
         margin: 0 2px
-        background-color: #ee9b9b
+        background-color: #ebcaca
         padding: 20px
         justify-content: center
         align-items: center
         cursor: pointer
+        transition: all 0.5s ease 0s
 
-        &._active
-            background-color: #539bee
+    &._active
+        background-color: #8cb5e4
+        // transform: scaleY(1.1)
 
-
-    // .tabs-block__body
+    // .mytabs__body
     &__body
 
-    // .tabs-block__block
+    // .mytabs__block
     &__block
 
+// ============================================== spoiler
+.spoiler-block
 
+    // .spoiler-block__item
+    &__item
 
-// ui.sass ----------------------------
-._tabs
+    // .spoiler-block__title
+    &__title
+        background-color: #e7bebe
+        cursor: pointer
+        padding: 20px
+        position: relative
 
-	// ._tabs__caption
-	&__caption
+    // spoiler-block__title-icon
+    &-icon
+        transition: all 0.3s ease 0s
 
-	// ._tabs-block
-	&__block
-		display: none
+    // spoiler-block__title _active
+    &._active
 
-		// ._tabs-block.active
-		&._active
-			display: block
+    ._icon-arrow-down
+        transition: all 0.3s ease 0s
+        transform: rotate(180deg)
 
+        &::before
+            content: ""
+            width: 14px
+            background-color: #fff
+            height: 2px
+            transform: translate(0, -50%) rotate(45deg)
+            position: absolute
+            right: 30px
+            top: 50%
+
+        &::after
+            content: ""
+            width: 14px
+            background-color: #fff
+            height: 2px
+            transform: translate(0, -50%) rotate(-45deg)
+            position: absolute
+            right: 20px
+            top: 50%
+
+    // .spoiler-block__body
+    &__body
+        // display: none
+        padding: 10px 0px 0px 0px

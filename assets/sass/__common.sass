@@ -3,37 +3,36 @@
 
 // $_container_width: 1270  // 1240 + 15*2
 
-$md1_desktop: 1240px
-$md2_992: 991.98px
-$md3_768: 767.98px  // меньше 768 - уже мобильный вариант
-$md4_480: 479.98px
-$md5_320: 319.98px
+$_media_desktop: 1240
+$_media_992: 991.98
+$_media_768: 767.98 // меньше 768 - уже мобильный вариант
+$_media_480: 479.98
+$_media_320: 319.98
 
 // шрифты
-$fontFamily_def: Arial, Helvetica, sans-serif
-$fontSize_def: 16px
+$_fontFamily_def: Arial, Helvetica, sans-serif
+$_fontSize_def: 16px
 
 // colors
 $color_blue: #00f
 $color_red: #f00
 
-body 
-    font-family: $fontFamily_def
-    font-size: $fontSize_def
-    line-height: 1
-
+body
+	font-family: $_fontFamily_def
+	font-size: $_fontSize_def
+	line-height: 1
 
 ._container  // технический класс, не участвует в БЭМ
-    max-width: 1270px  // 1240 + 15*2
-    margin: 0 auto
-    padding: 0 15px
+	max-width: 1270px // 1240 + 15*2
+	margin: 0 auto
+	padding: 0 15px
 
-    // @media screen and ( max-width: 1240px )
-    //     max-width: 970px
+	@media screen and ( max-width: 1240px )
+		max-width: 970px
 
-    // @media screen and ( max-width: 992px )
-    //     max-width: 750px
-        
-    // @media screen and ( max-width: 768px )
-    //     max-width: none
-    //     padding: 0 10px
+	@media screen and ( max-width: 992px )
+		max-width: 750px
+
+	@media screen and ( max-width: 768px )
+		max-width: none
+		padding: 0 10px
